@@ -1,0 +1,2271 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7 Kebiasaan Anak Indonesia Hebat — SMAS St. Fransiskus Xaverius Ruteng</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Poppins"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              ivory: '#FFFDF7',
+              cream: '#FEFCE8',
+              light: '#FEF9C3',
+              soft: '#FDE047',
+              yellow: '#FACC15',
+              primary: '#EAB308',
+              gold: '#F59E0B',
+              amber: '#D97706',
+              deep: '#B45309',
+              ink: '#1E293B',
+            },
+          },
+          boxShadow: {
+            'gold-sm': '0 4px 14px -2px rgba(234, 179, 8, 0.14)',
+            'gold-md': '0 10px 28px -5px rgba(234, 179, 8, 0.18), 0 4px 12px -4px rgba(180, 83, 9, 0.08)',
+            'gold-lg': '0 20px 40px -10px rgba(234, 179, 8, 0.24), 0 8px 16px -6px rgba(180, 83, 9, 0.1)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+
+  <style>
+    /* Custom styling for refined golden-white UI polish */
+    body {
+      background-color: #FFFDF7;
+      color: #1E293B;
+      overflow-x: hidden;
+    }
+
+    /* Subtle dot grid pattern in warm gold */
+    .bg-gold-dots {
+      background-image: radial-gradient(rgba(234, 179, 8, 0.22) 1.25px, transparent 1.25px);
+      background-size: 22px 22px;
+    }
+
+    /* Smooth card lift & hover highlight */
+    .habit-card {
+      transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+                  box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+                  border-color 0.28s ease;
+    }
+    .habit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 34px -8px rgba(234, 179, 8, 0.24), 0 6px 14px -4px rgba(180, 83, 9, 0.08);
+    }
+
+    /* Custom checkbox bounce animation */
+    @keyframes popCheck {
+      0% { transform: scale(0.85); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+    .animate-pop {
+      animation: popCheck 0.26s ease-out forwards;
+    }
+
+    /* Floating slow animation for hero badge */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    .animate-float {
+      animation: floatSlow 4s ease-in-out infinite;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FEFCE8;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #FACC15;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #EAB308;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-yellow-200 selection:text-amber-900">
+
+  <!-- ==================== 1. HEADER DASHBOARD ==================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-yellow-200/80 shadow-gold-sm">
+    <!-- Top School & Live Clock Ribbon -->
+    <div class="bg-gradient-to-r from-amber-50 via-yellow-100/80 to-amber-50 border-b border-yellow-200/70">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1.5 flex flex-wrap items-center justify-between gap-2 text-xs font-medium text-amber-900">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex h-2 w-2 rounded-full bg-amber-500 animate-pulse"></span>
+          <span class="font-semibold tracking-wide">SMAS St. Fransiskus Xaverius Ruteng</span>
+          <span class="hidden sm:inline text-amber-400">•</span>
+          <span class="hidden sm:inline bg-yellow-300/70 text-amber-950 px-2 py-0.5 rounded-full font-semibold">Program VERTIKAL SMA 2026</span>
+        </div>
+        <div class="flex items-center gap-2 bg-white/90 px-3 py-0.5 rounded-full border border-yellow-300/80 shadow-xs">
+          <!-- Calendar/Clock SVG -->
+          <svg class="w-3.5 h-3.5 text-amber-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span id="live-datetime" class="font-semibold text-slate-800 tabular-nums">Memuat waktu...</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation & Brand Bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div class="flex items-center justify-between gap-4">
+        <!-- Brand Identity -->
+        <a href="#beranda" class="flex items-center gap-3 group focus:outline-none">
+          <!-- Custom School & 7 Habits Golden Emblem SVG -->
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-yellow-300 via-yellow-400 to-amber-500 p-0.5 shadow-gold-md group-hover:scale-105 transition-transform shrink-0">
+            <div class="w-full h-full bg-white rounded-[14px] flex items-center justify-center">
+              <svg class="w-7 h-7" viewBox="0 0 40 40" fill="none">
+                <circle cx="20" cy="20" r="17" fill="#FEF9C3" stroke="#EAB308" stroke-width="2"/>
+                <path d="M20 7L23.2 13.8L30.6 14.8L25.2 20L26.5 27.4L20 23.9L13.5 27.4L14.8 20L9.4 14.8L16.8 13.8L20 7Z" fill="#FACC15" stroke="#D97706" stroke-width="1.6" stroke-linejoin="round"/>
+                <circle cx="20" cy="18.5" r="3" fill="#FFFDF7" stroke="#B45309" stroke-width="1.4"/>
+              </svg>
+            </div>
+          </div>
+          <div>
+            <h1 class="font-display font-extrabold text-base sm:text-lg lg:text-xl text-slate-900 leading-tight tracking-tight">
+              7 Kebiasaan <span class="text-amber-600">Anak Indonesia Hebat</span>
+            </h1>
+            <p class="text-[11px] sm:text-xs text-slate-600 font-medium line-clamp-1">
+              Membangun Generasi Cerdas, Sehat, Disiplin, dan Berkarakter
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav aria-label="Navigasi Utama" class="hidden lg:flex items-center gap-1.5 bg-yellow-50/90 p-1.5 rounded-2xl border border-yellow-200/80">
+          <a href="#beranda" data-nav="beranda" class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold transition-all bg-yellow-400 text-slate-950 shadow-xs">Beranda</a>
+          <a href="#kebiasaan" data-nav="kebiasaan" class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-yellow-100/80 transition-all">7 Kebiasaan</a>
+          <a href="#statistik" data-nav="statistik" class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-yellow-100/80 transition-all">Statistik</a>
+          <a href="#aktivitas" data-nav="aktivitas" class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-yellow-100/80 transition-all">Aktivitas</a>
+          <a href="#tentang" data-nav="tentang" class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-yellow-100/80 transition-all">Tentang</a>
+        </nav>
+
+        <!-- Quick Status Pill & Mobile Menu Toggle -->
+        <div class="flex items-center gap-2.5">
+          <a href="#aktivitas" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-gold-sm transition-all active:scale-95">
+            <span>Hari Ini:</span>
+            <span id="header-progress-badge" class="bg-white/95 text-amber-900 px-2 py-0.5 rounded-lg font-extrabold">0/7</span>
+          </a>
+
+          <button id="mobile-menu-btn" type="button" aria-label="Buka Menu Navigasi" class="lg:hidden p-2.5 rounded-xl bg-yellow-50 border border-yellow-200 text-amber-900 hover:bg-yellow-100 transition-colors">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Navigation -->
+      <nav id="mobile-nav" class="hidden lg:hidden mt-3 pt-3 border-t border-yellow-200/70 grid grid-cols-2 sm:grid-cols-5 gap-2">
+        <a href="#beranda" data-nav="beranda" class="nav-link-mobile text-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-yellow-400 text-slate-950">Beranda</a>
+        <a href="#kebiasaan" data-nav="kebiasaan" class="nav-link-mobile text-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-yellow-50 text-slate-700 hover:bg-yellow-100">7 Kebiasaan</a>
+        <a href="#statistik" data-nav="statistik" class="nav-link-mobile text-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-yellow-50 text-slate-700 hover:bg-yellow-100">Statistik</a>
+        <a href="#aktivitas" data-nav="aktivitas" class="nav-link-mobile text-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-yellow-50 text-slate-700 hover:bg-yellow-100">Aktivitas</a>
+        <a href="#tentang" data-nav="tentang" class="nav-link-mobile text-center px-3 py-2.5 rounded-xl text-sm font-semibold bg-yellow-50 text-slate-700 hover:bg-yellow-100 col-span-2 sm:col-span-1">Tentang</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section id="beranda" class="relative overflow-hidden bg-gradient-to-b from-white via-yellow-50/70 to-brand-ivory bg-gold-dots border-b border-yellow-200/60">
+      <!-- Soft Decorative Golden Glows -->
+      <div class="pointer-events-none absolute -top-24 -right-24 w-96 h-96 rounded-full bg-yellow-300/25 blur-3xl"></div>
+      <div class="pointer-events-none absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-amber-300/20 blur-3xl"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          <!-- Left Hero Copy -->
+          <div class="lg:col-span-7 space-y-6">
+            <!-- Live Daily Summary Pill -->
+            <div class="inline-flex flex-wrap items-center gap-2 bg-white border border-yellow-300 shadow-gold-sm px-4 py-2 rounded-2xl">
+              <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-yellow-400 text-amber-950 font-bold text-xs">★</span>
+              <span id="hero-live-pill" class="text-xs sm:text-sm font-semibold text-slate-800">
+                Progres Hari Ini: <strong class="text-amber-700">0/7 Kebiasaan (0%)</strong> • Streak: <strong class="text-amber-700">0 Hari</strong>
+              </span>
+            </div>
+
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-slate-900 leading-[1.15] tracking-tight">
+              Generasi Hebat Dimulai dari
+              <span class="relative inline-block">
+                <span class="relative z-10 text-amber-600">Kebiasaan Hebat!</span>
+                <span class="absolute left-0 bottom-1 w-full h-3 bg-yellow-300/80 -z-0 rounded-full"></span>
+              </span>
+            </h2>
+
+            <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl">
+              Membangun karakter unggul sejak dini melalui rutinitas positif yang konsisten. Pantau perkembangan <strong>7 Kebiasaan Anak Indonesia Hebat</strong> setiap hari sekaligus eksplorasi capaian nyata <strong>1.402 respons siswa SMAS St. Fransiskus Xaverius Ruteng</strong> dalam 4 gelombang survei VERTIKAL 2026.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-3.5 pt-1">
+              <a href="#aktivitas" class="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-yellow-400 via-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-slate-950 font-bold text-sm sm:text-base px-6 py-3.5 rounded-2xl shadow-gold-md hover:shadow-gold-lg transition-all active:scale-95">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Isi Checklist Hari Ini</span>
+              </a>
+
+              <a href="#statistik" class="inline-flex items-center justify-center gap-2.5 bg-white hover:bg-yellow-50 text-slate-800 border-2 border-yellow-300 font-bold text-sm sm:text-base px-6 py-3.5 rounded-2xl shadow-gold-sm transition-all active:scale-95">
+                <svg class="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+                <span>Eksplorasi Data 4 Gelombang</span>
+              </a>
+            </div>
+
+            <!-- 4 Survey Wave Mini Highlights -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
+              <div class="bg-white/95 border border-yellow-200 rounded-2xl p-3 shadow-xs">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-amber-600">Pengisian 1</div>
+                <div class="text-sm font-extrabold text-slate-900 mt-0.5">Tgl 3–5 Nov</div>
+                <div class="text-xs text-slate-500">677 resp • <strong class="text-slate-700">78.1%</strong></div>
+              </div>
+              <div class="bg-white/95 border border-yellow-200 rounded-2xl p-3 shadow-xs">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-amber-600">Pengisian 2</div>
+                <div class="text-sm font-extrabold text-slate-900 mt-0.5">Tgl 5–9 Nov</div>
+                <div class="text-xs text-slate-500">445 resp • <strong class="text-slate-700">80.0%</strong></div>
+              </div>
+              <div class="bg-white/95 border border-yellow-200 rounded-2xl p-3 shadow-xs">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-amber-600">Pengisian 3</div>
+                <div class="text-sm font-extrabold text-slate-900 mt-0.5">Tgl 10–11 Nov</div>
+                <div class="text-xs text-slate-500">138 resp • <strong class="text-slate-700">80.0%</strong></div>
+              </div>
+              <div class="bg-white/95 border border-yellow-200 rounded-2xl p-3 shadow-xs">
+                <div class="text-[11px] font-bold uppercase tracking-wider text-amber-600">Pengisian 4</div>
+                <div class="text-sm font-extrabold text-slate-900 mt-0.5">Tgl 12–13 Nov</div>
+                <div class="text-xs text-slate-500">114 resp • <strong class="text-slate-700">79.5%</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Hero Custom Vector SVG Illustration -->
+          <div class="lg:col-span-5">
+            <div class="relative bg-white rounded-3xl p-5 sm:p-6 border-2 border-yellow-200 shadow-gold-lg">
+              <!-- Floating Top Badge -->
+              <div class="animate-float absolute -top-4 right-5 bg-gradient-to-r from-yellow-400 to-amber-500 text-slate-950 font-extrabold text-xs px-3.5 py-1.5 rounded-full shadow-gold-md border border-white">
+                Indeks Sekolah: 78.95% (1.402 Respon)
+              </div>
+
+              <!-- Rich Custom SVG Illustration: Indonesian High School Students Practicing Positive Habits -->
+              <svg class="w-full h-auto rounded-2xl" viewBox="0 0 480 370" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustrasi Siswa SMA Indonesia Belajar, Berolahraga, Bangun Pagi, dan Bergotong Royong">
+                <!-- Warm Golden Backdrop -->
+                <rect width="480" height="370" rx="20" fill="#FFFBEB"/>
+                <circle cx="240" cy="175" r="145" fill="#FEF3C7"/>
+                <circle cx="240" cy="175" r="108" fill="#FDE68A" fill-opacity="0.55"/>
+
+                <!-- Morning Sun Rays (Bangun Pagi) -->
+                <circle cx="92" cy="68" r="28" fill="#FACC15"/>
+                <circle cx="92" cy="68" r="20" fill="#FDE047"/>
+                <g stroke="#F59E0B" stroke-width="3" stroke-linecap="round">
+                  <line x1="92" y1="26" x2="92" y2="33"/>
+                  <line x1="92" y1="103" x2="92" y2="110"/>
+                  <line x1="50" y1="68" x2="57" y2="68"/>
+                  <line x1="127" y1="68" x2="134" y2="68"/>
+                  <line x1="63" y1="39" x2="68" y2="44"/>
+                  <line x1="116" y1="92" x2="121" y2="97"/>
+                  <line x1="121" y1="39" x2="116" y2="44"/>
+                  <line x1="68" y1="92" x2="63" y2="97"/>
+                </g>
+
+                <!-- Floating Habit Icons Around Students -->
+                <!-- Book Icon (Gemar Belajar) -->
+                <g transform="translate(352, 46)">
+                  <rect width="58" height="46" rx="12" fill="#FFFFFF" stroke="#FACC15" stroke-width="2"/>
+                  <path d="M16 16C20 14 26 15 29 18C32 15 38 14 42 16V32C38 30 32 31 29 34C26 31 20 30 16 32V16Z" fill="#FEF08A" stroke="#D97706" stroke-width="1.8" stroke-linejoin="round"/>
+                  <line x1="29" y1="18" x2="29" y2="34" stroke="#D97706" stroke-width="1.8"/>
+                </g>
+
+                <!-- Apple/Nutrition Icon (Makan Sehat) -->
+                <g transform="translate(46, 146)">
+                  <rect width="52" height="46" rx="12" fill="#FFFFFF" stroke="#FACC15" stroke-width="2"/>
+                  <circle cx="26" cy="26" r="10" fill="#FACC15" stroke="#B45309" stroke-width="1.8"/>
+                  <path d="M26 16C26 12 30 10 33 11" stroke="#15803D" stroke-width="2" stroke-linecap="round"/>
+                </g>
+
+                <!-- Heart/Community Icon (Bermasyarakat) -->
+                <g transform="translate(382, 148)">
+                  <rect width="52" height="46" rx="12" fill="#FFFFFF" stroke="#FACC15" stroke-width="2"/>
+                  <path d="M26 34C26 34 15 27 15 20C15 16.8 17.5 14.5 20.5 14.5C22.8 14.5 24.8 15.8 26 17.6C27.2 15.8 29.2 14.5 31.5 14.5C34.5 14.5 37 16.8 37 20C37 27 26 34 26 34Z" fill="#F59E0B"/>
+                </g>
+
+                <!-- Ground & School Path -->
+                <ellipse cx="240" cy="316" rx="195" ry="24" fill="#FDE047" fill-opacity="0.6"/>
+                <rect x="75" y="294" width="330" height="16" rx="8" fill="#F59E0B" fill-opacity="0.25"/>
+
+                <!-- Student 1 (Left - Indonesian High School Girl Reading Book) -->
+                <g transform="translate(115, 132)">
+                  <!-- Hair & Head -->
+                  <circle cx="48" cy="44" r="24" fill="#334155"/>
+                  <circle cx="48" cy="48" r="19" fill="#FDBA74"/>
+                  <!-- Smile & Eyes -->
+                  <circle cx="42" cy="46" r="2.2" fill="#1E293B"/>
+                  <circle cx="54" cy="46" r="2.2" fill="#1E293B"/>
+                  <path d="M43 54C45.5 57 50.5 57 53 54" stroke="#9A3412" stroke-width="2" stroke-linecap="round"/>
+                  <!-- Golden Hair Ribbon -->
+                  <path d="M28 32L36 37L31 43Z" fill="#FACC15" stroke="#B45309" stroke-width="1.2"/>
+                  <!-- SMA Uniform White Shirt & Golden Tie -->
+                  <path d="M22 76C22 69 30 65 48 65C66 65 74 69 74 76L80 128H16L22 76Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.8"/>
+                  <path d="M45 66H51L53 92L48 97L43 92L45 66Z" fill="#EAB308"/>
+                  <!-- Skirt -->
+                  <path d="M20 126H76L82 164H14L20 126Z" fill="#64748B"/>
+                  <!-- Open Yellow Book in Hands -->
+                  <path d="M24 96C33 92 43 94 48 98C53 94 63 92 72 96V120C63 116 53 118 48 122C43 118 33 116 24 120V96Z" fill="#FEF08A" stroke="#D97706" stroke-width="2" stroke-linejoin="round"/>
+                  <line x1="48" y1="98" x2="48" y2="122" stroke="#D97706" stroke-width="2"/>
+                </g>
+
+                <!-- Student 2 (Center - Indonesian High School Boy Raising Trophy/Star of Discipline) -->
+                <g transform="translate(196, 108)">
+                  <!-- Hair & Head -->
+                  <path d="M24 44C24 26 35 18 48 18C61 18 72 26 72 44H24Z" fill="#1E293B"/>
+                  <circle cx="48" cy="48" r="20" fill="#FDBA74"/>
+                  <circle cx="41" cy="46" r="2.3" fill="#1E293B"/>
+                  <circle cx="55" cy="46" r="2.3" fill="#1E293B"/>
+                  <path d="M42 55C45 58.5 51 58.5 54 55" stroke="#9A3412" stroke-width="2.2" stroke-linecap="round"/>
+                  <!-- White Uniform Top -->
+                  <path d="M18 78C18 70 28 66 48 66C68 66 78 70 78 78L84 136H12L18 78Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.8"/>
+                  <!-- Golden Sash / Badge -->
+                  <path d="M26 68L72 134H60L18 74Z" fill="#FACC15"/>
+                  <circle cx="62" cy="88" r="7" fill="#F59E0B" stroke="#FFFFFF" stroke-width="1.8"/>
+                  <!-- Trousers -->
+                  <rect x="22" y="136" width="22" height="52" rx="6" fill="#475569"/>
+                  <rect x="52" y="136" width="22" height="52" rx="6" fill="#475569"/>
+                  <!-- Raised Arm Holding Golden Torch/Star -->
+                  <path d="M76 80L96 52" stroke="#FDBA74" stroke-width="10" stroke-linecap="round"/>
+                  <circle cx="99" cy="44" r="14" fill="#FACC15" stroke="#D97706" stroke-width="2"/>
+                  <path d="M99 35L101.5 40.5L107.5 41.3L103 45.5L104.2 51.5L99 48.6L93.8 51.5L95 45.5L90.5 41.3L96.5 40.5L99 35Z" fill="#FFFFFF"/>
+                </g>
+
+                <!-- Student 3 (Right - Student Exercising / Stretching) -->
+                <g transform="translate(292, 138)">
+                  <circle cx="44" cy="42" r="22" fill="#1E293B"/>
+                  <circle cx="44" cy="46" r="18" fill="#FDBA74"/>
+                  <circle cx="38" cy="44" r="2" fill="#1E293B"/>
+                  <circle cx="50" cy="44" r="2" fill="#1E293B"/>
+                  <path d="M39 52C42 55 46 55 49 52" stroke="#9A3412" stroke-width="2" stroke-linecap="round"/>
+                  <!-- Sport Jersey (Yellow & White) -->
+                  <path d="M20 74C20 67 28 63 44 63C60 63 68 67 68 74L72 122H16L20 74Z" fill="#FACC15" stroke="#D97706" stroke-width="1.8"/>
+                  <rect x="30" y="76" width="28" height="10" rx="5" fill="#FFFFFF"/>
+                  <!-- Sport Shorts & Legs -->
+                  <rect x="22" y="122" width="44" height="22" rx="6" fill="#1E293B"/>
+                  <rect x="24" y="144" width="15" height="22" rx="5" fill="#FDBA74"/>
+                  <rect x="49" y="144" width="15" height="22" rx="5" fill="#FDBA74"/>
+                </g>
+
+                <!-- Bottom Banner Pill inside SVG -->
+                <rect x="95" y="324" width="290" height="30" rx="15" fill="#FFFFFF" stroke="#FACC15" stroke-width="2"/>
+                <text x="240" y="343" text-anchor="middle" fill="#92400E" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700">
+                  VERTIKAL SMA 2026 • Ruteng, Nusa Tenggara Timur
+                </text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. TUJUH KEBIASAAN ANAK INDONESIA HEBAT ==================== -->
+    <section id="kebiasaan" class="py-14 sm:py-18 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <div>
+          <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-amber-700 bg-yellow-100 border border-yellow-300 px-3 py-1 rounded-full mb-3">
+            <span>7 Pilar Karakter Utama</span>
+          </span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900">
+            7 Kebiasaan Anak Indonesia Hebat
+          </h2>
+          <p class="text-slate-600 mt-2 max-w-2xl text-sm sm:text-base">
+            Tandai kebiasaan yang sudah kamu lakukan hari ini langsung pada kartu, atau klik <strong>Detail Indikator</strong> untuk melihat skor survei tiap indikator dari 1.402 siswa.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2 bg-yellow-50 border border-yellow-200 px-4 py-2.5 rounded-2xl self-start md:self-auto">
+          <span class="text-xs font-semibold text-slate-600">Skor Rata-Rata Sekolah:</span>
+          <span class="text-base font-extrabold text-amber-700">78.95%</span>
+        </div>
+      </div>
+
+      <!-- 7 Cards Responsive Grid -->
+      <div id="habits-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <!-- Populated dynamically via JavaScript for clean state sync -->
+      </div>
+    </section>
+
+    <!-- ==================== 4. STATISTIK DASHBOARD (4 WAVES + LIVE TRACKER) ==================== -->
+    <section id="statistik" class="py-14 sm:py-18 bg-gradient-to-b from-yellow-50/80 via-white to-yellow-50/60 border-y border-yellow-200/70">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
+          <div>
+            <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-amber-800 bg-yellow-200/80 px-3 py-1 rounded-full mb-3">
+              Analitik Data Real-Time & Survei 4 Gelombang
+            </span>
+            <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900">
+              Statistik & Capaian Kebiasaan
+            </h2>
+            <p class="text-slate-600 mt-2 max-w-2xl text-sm sm:text-base">
+              Eksplorasi hasil pemantauan <strong>1.402 respons siswa</strong> across 4 gelombang pengisian (3–13 Nov 2026) dan pantau konsistensi harianmu secara langsung.
+            </p>
+          </div>
+
+          <!-- Active Dataset Summary Badge -->
+          <div id="active-filter-summary" class="bg-white border-2 border-yellow-300 rounded-2xl px-4 py-3 shadow-gold-sm flex items-center gap-3 self-start lg:self-auto">
+            <div class="w-10 h-10 rounded-xl bg-yellow-400 text-slate-950 font-extrabold flex items-center justify-center text-sm shrink-0">
+              📊
+            </div>
+            <div>
+              <div class="text-xs font-bold text-amber-700 uppercase tracking-wide" id="filter-badge-title">Semua Data Survei</div>
+              <div class="text-sm font-extrabold text-slate-900" id="filter-badge-detail">1.402 Responden • Indeks 78.95% (3.95/5.0)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Filter Controls: 4 Survey Waves + Class Filter -->
+        <div class="bg-white rounded-3xl p-4 sm:p-5 border border-yellow-200 shadow-gold-sm mb-8 space-y-4">
+          <!-- Wave Filter Tabs -->
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 flex items-center gap-2">
+              <span>Filter Gelombang Pengisian Survei:</span>
+              <span class="text-amber-700 bg-yellow-100 px-2 py-0.5 rounded-md font-semibold">4 Gelombang + Pra-Survei</span>
+            </div>
+            <div id="wave-filter-tabs" class="flex flex-wrap gap-2">
+              <button type="button" data-wave="all" class="wave-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-yellow-400 text-slate-950 shadow-xs transition-all">
+                Semua Data (1.402)
+              </button>
+              <button type="button" data-wave="wave1" class="wave-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-yellow-50 text-slate-700 hover:bg-yellow-100 border border-yellow-200 transition-all">
+                Pengisian 1: Tgl 3–5 Nov (677)
+              </button>
+              <button type="button" data-wave="wave2" class="wave-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-yellow-50 text-slate-700 hover:bg-yellow-100 border border-yellow-200 transition-all">
+                Pengisian 2: Tgl 5–9 Nov (445)
+              </button>
+              <button type="button" data-wave="wave3" class="wave-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-yellow-50 text-slate-700 hover:bg-yellow-100 border border-yellow-200 transition-all">
+                Pengisian 3: Tgl 10–11 Nov (138)
+              </button>
+              <button type="button" data-wave="wave4" class="wave-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-yellow-50 text-slate-700 hover:bg-yellow-100 border border-yellow-200 transition-all">
+                Pengisian 4: Tgl 12–13 Nov (114)
+              </button>
+            </div>
+          </div>
+
+          <!-- Class Filter Pills -->
+          <div class="pt-3 border-t border-yellow-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex flex-wrap items-center gap-2" id="class-filter-tabs">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-500 mr-1">Filter Tingkat Kelas:</span>
+              <button type="button" data-class="all" class="class-tab px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-white shadow-xs transition-all">
+                Semua Kelas (1.402)
+              </button>
+              <button type="button" data-class="X" class="class-tab px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-yellow-100 transition-all">
+                Kelas X (495 • 79.3%)
+              </button>
+              <button type="button" data-class="XI" class="class-tab px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-yellow-100 transition-all">
+                Kelas XI (511 • 77.4%)
+              </button>
+              <button type="button" data-class="XII" class="class-tab px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-yellow-100 transition-all">
+                Kelas XII (390 • 80.5%)
+              </button>
+            </div>
+            <div class="text-[11px] text-slate-500 font-medium">
+              *Termasuk Pra-Survei 29–30 Okt (n=28, 74.3%)
+            </div>
+          </div>
+        </div>
+
+        <!-- Top 4 KPI Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-8">
+          <!-- KPI 1: Total Kebiasaan Selesai Hari Ini -->
+          <div class="bg-white rounded-2xl p-5 border border-yellow-200 shadow-gold-sm relative overflow-hidden">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-slate-500">Selesai Hari Ini</p>
+                <div class="mt-2 flex items-baseline gap-2">
+                  <span id="kpi-completed-count" class="font-display font-extrabold text-3xl text-slate-900">0</span>
+                  <span class="text-sm font-bold text-amber-600">/ 7 Kebiasaan</span>
+                </div>
+              </div>
+              <div class="w-11 h-11 rounded-2xl bg-yellow-100 text-amber-600 flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <div class="mt-3 text-xs text-slate-600 font-medium" id="kpi-total-cumulative">
+              Total akumulasi: <strong>0</strong> aktivitas tercatat
+            </div>
+          </div>
+
+          <!-- KPI 2: Persentase Konsistensi Harian -->
+          <div class="bg-white rounded-2xl p-5 border border-yellow-200 shadow-gold-sm relative overflow-hidden">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-slate-500">Konsistensi Harian</p>
+                <div class="mt-2 flex items-baseline gap-2">
+                  <span id="kpi-daily-percent" class="font-display font-extrabold text-3xl text-amber-600">0%</span>
+                  <span id="kpi-daily-status" class="text-xs font-bold bg-yellow-100 text-amber-800 px-2 py-0.5 rounded-full">Mulai Hari Ini</span>
+                </div>
+              </div>
+              <div class="w-11 h-11 rounded-2xl bg-yellow-400 text-slate-950 flex items-center justify-center font-extrabold">
+                %
+              </div>
+            </div>
+            <div class="mt-3 w-full bg-yellow-100 h-2 rounded-full overflow-hidden">
+              <div id="kpi-daily-bar" class="bg-gradient-to-r from-yellow-400 to-amber-500 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+            </div>
+          </div>
+
+          <!-- KPI 3: Jumlah Hari Menjalankan Kebiasaan -->
+          <div class="bg-white rounded-2xl p-5 border border-yellow-200 shadow-gold-sm relative overflow-hidden">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-xs font-bold uppercase tracking-wider text-slate-500">Hari Aktif Kebiasaan</p>
+                <div class="mt-2 flex items-baseline gap-2">
+                  <span id="kpi-active-days" class="font-display font-extrabold text-3xl text-slate-900">0</span>
+                  <span class="text-sm font-bold text-amber-600">Hari</span>
+                </div>
+              </div>
+              <div class="w-11 h-11 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                </svg>
+              </div>
+            </div>
+            <div class="mt-3 text-xs text-slate-600 font-medium" id="kpi-streak-note">
+              Pertahankan konsistensi harianmu!
+            </div>
+          </div>
+
+          <!-- KPI 4: Indeks Rata-Rata Sekolah -->
+          <div class="bg-gradient-to-br from-yellow-400 via-yellow-400 to-amber-500 rounded-2xl p-5 text-slate-950 shadow-gold-md relative overflow-hidden">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-wider text-amber-950/80">Indeks Survei Sekolah</p>
+                <div class="mt-2 flex items-baseline gap-2">
+                  <span id="kpi-school-score" class="font-display font-extrabold text-3xl text-slate-950">78.95%</span>
+                  <span id="kpi-school-likert" class="text-xs font-extrabold bg-white/85 text-amber-950 px-2 py-0.5 rounded-full">3.95 / 5.0</span>
+                </div>
+              </div>
+              <div class="w-11 h-11 rounded-2xl bg-white/90 text-amber-700 flex items-center justify-center">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
+              </div>
+            </div>
+            <div class="mt-3 text-xs font-bold text-amber-950" id="kpi-school-respondents">
+              Dari 1.402 respons siswa SMAS Ruteng
+            </div>
+          </div>
+        </div>
+
+        <!-- Charts Grid: Bar Chart + Doughnut Chart -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8">
+          <!-- Bar Chart (7 cols) -->
+          <div class="lg:col-span-7 bg-white rounded-3xl p-5 sm:p-6 border border-yellow-200 shadow-gold-sm flex flex-col">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+              <div>
+                <h3 class="font-display font-bold text-lg text-slate-900" id="bar-chart-title">Capaian 7 Kebiasaan (Semua Data • 1.402)</h3>
+                <p class="text-xs text-slate-500" id="bar-chart-subtitle">Persentase indeks pembiasaan siswa berdasarkan gelombang & kelas terpilih</p>
+              </div>
+              <div class="inline-flex bg-yellow-50 p-1 rounded-xl border border-yellow-200 self-start">
+                <button type="button" data-barmode="single" class="bar-mode-btn px-2.5 py-1 rounded-lg text-xs font-bold bg-yellow-400 text-slate-950 transition-all">Per Kebiasaan</button>
+                <button type="button" data-barmode="waves" class="bar-mode-btn px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all">4 Gelombang</button>
+              </div>
+            </div>
+            <div class="relative w-full h-72 sm:h-80 flex-1">
+              <canvas id="habitsBarChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Doughnut Chart (5 cols) -->
+          <div class="lg:col-span-5 bg-white rounded-3xl p-5 sm:p-6 border border-yellow-200 shadow-gold-sm flex flex-col">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+              <div>
+                <h3 class="font-display font-bold text-lg text-slate-900" id="doughnut-chart-title">Diagram Konsistensi</h3>
+                <p class="text-xs text-slate-500" id="doughnut-chart-subtitle">Proporsi kebiasaan selesai hari ini vs distribusi survei</p>
+              </div>
+              <div class="inline-flex bg-yellow-50 p-1 rounded-xl border border-yellow-200 self-start">
+                <button type="button" data-doughnutmode="personal" class="doughnut-mode-btn px-2.5 py-1 rounded-lg text-xs font-bold bg-yellow-400 text-slate-950 transition-all">Harianmu</button>
+                <button type="button" data-doughnutmode="likert" class="doughnut-mode-btn px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all">Skala Survei</button>
+              </div>
+            </div>
+            <div class="relative w-full h-64 sm:h-72 flex-1 flex items-center justify-center">
+              <canvas id="consistencyDoughnutChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weekly Activity Chart + Individual 7 Habit Progress Bars -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Weekly / Wave Timeline Chart (6 cols) -->
+          <div class="lg:col-span-6 bg-white rounded-3xl p-5 sm:p-6 border border-yellow-200 shadow-gold-sm flex flex-col">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+              <div>
+                <h3 class="font-display font-bold text-lg text-slate-900" id="weekly-chart-title">Grafik Aktivitas Mingguan</h3>
+                <p class="text-xs text-slate-500" id="weekly-chart-subtitle">Jumlah kebiasaan selesai per hari (Senin – Minggu)</p>
+              </div>
+              <div class="inline-flex bg-yellow-50 p-1 rounded-xl border border-yellow-200 self-start">
+                <button type="button" data-weeklymode="personal" class="weekly-mode-btn px-2.5 py-1 rounded-lg text-xs font-bold bg-yellow-400 text-slate-950 transition-all">Mingguanmu</button>
+                <button type="button" data-weeklymode="timeline" class="weekly-mode-btn px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all">Tren 4 Pengisian</button>
+              </div>
+            </div>
+            <div class="relative w-full h-72 flex-1">
+              <canvas id="weeklyActivityChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Progress Setiap Kebiasaan (6 cols) -->
+          <div class="lg:col-span-6 bg-white rounded-3xl p-5 sm:p-6 border border-yellow-200 shadow-gold-sm">
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <div>
+                <h3 class="font-display font-bold text-lg text-slate-900">Progress Setiap Kebiasaan</h3>
+                <p class="text-xs text-slate-500">Perbandingan capaian survei sekolah vs status harianmu</p>
+              </div>
+              <span class="text-xs font-bold text-amber-700 bg-yellow-100 px-2.5 py-1 rounded-full">7 Pilar</span>
+            </div>
+
+            <div id="habit-progress-bars-list" class="space-y-3.5">
+              <!-- Populated dynamically via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. FITUR INTERAKTIF: AKTIVITAS, KALENDER & BADGE ==================== -->
+    <section id="aktivitas" class="py-14 sm:py-18 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-amber-700 bg-yellow-100 border border-yellow-300 px-3 py-1 rounded-full mb-3">
+          Pelacak Kebiasaan & Gamifikasi Karakter
+        </span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-slate-900">
+          Aktivitas Harian, Kalender 4 Gelombang & Pencapaian
+        </h2>
+        <p class="text-slate-600 mt-2 max-w-2xl text-sm sm:text-base">
+          Kelola checklist harianmu, telusuri jadwal <strong>4 gelombang pengisian survei November 2026</strong> pada kalender interaktif, dan kumpulkan seluruh lencana prestasi.
+        </p>
+      </div>
+
+      <!-- Checklist + Interactive November 2026 Calendar -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10">
+        <!-- Interactive Checklist Panel (5 cols) -->
+        <div class="lg:col-span-5 bg-white rounded-3xl p-5 sm:p-6 border-2 border-yellow-200 shadow-gold-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between gap-3 pb-4 border-b border-yellow-100">
+              <div>
+                <span class="text-[11px] font-extrabold uppercase tracking-wider text-amber-600">Checklist Tanggal Terpilih</span>
+                <h3 id="selected-date-label" class="font-display font-extrabold text-lg sm:text-xl text-slate-900 mt-0.5">
+                  Hari Ini (16 November 2026)
+                </h3>
+                <p id="selected-date-wave-note" class="text-xs text-slate-500 mt-0.5">
+                  Tandai setiap kebiasaan yang telah dilaksanakan
+                </p>
+              </div>
+              <div class="text-right shrink-0">
+                <div id="checklist-fraction" class="font-display font-extrabold text-2xl text-amber-600">0/7</div>
+                <div id="checklist-percent-pill" class="text-[11px] font-bold bg-yellow-100 text-amber-900 px-2 py-0.5 rounded-full">0%</div>
+              </div>
+            </div>
+
+            <!-- Live Progress Bar inside Checklist -->
+            <div class="my-4">
+              <div class="flex justify-between text-xs font-semibold text-slate-600 mb-1.5">
+                <span>Progres Kebiasaan</span>
+                <span id="checklist-motivation" class="text-amber-700 font-bold">Ayo mulai langkah pertamamu!</span>
+              </div>
+              <div class="w-full h-3 bg-yellow-100 rounded-full overflow-hidden p-0.5 border border-yellow-200">
+                <div id="checklist-progress-bar" class="h-full bg-gradient-to-r from-yellow-400 via-amber-400 to-amber-500 rounded-full transition-all duration-500" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <!-- Checklist Items Container -->
+            <div id="interactive-checklist" class="space-y-2.5 my-4">
+              <!-- Populated dynamically via JS -->
+            </div>
+          </div>
+
+          <!-- Action Footer Buttons -->
+          <div class="pt-4 border-t border-yellow-100 flex flex-wrap items-center justify-between gap-2.5">
+            <button id="btn-complete-all" type="button" class="flex-1 inline-flex items-center justify-center gap-1.5 bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-xs transition-all active:scale-95">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Tandai Semua</span>
+            </button>
+
+            <button id="btn-reset-daily" type="button" class="inline-flex items-center justify-center gap-1.5 bg-white hover:bg-red-50 text-slate-700 hover:text-red-700 border border-slate-200 hover:border-red-200 font-semibold text-xs sm:text-sm px-4 py-2.5 rounded-xl transition-all active:scale-95">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              <span>Reset Aktivitas Harian</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Interactive Calendar November 2026 (7 cols) -->
+        <div class="lg:col-span-7 bg-white rounded-3xl p-5 sm:p-6 border border-yellow-200 shadow-gold-sm flex flex-col justify-between">
+          <div>
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-yellow-100">
+              <div>
+                <h3 class="font-display font-extrabold text-lg sm:text-xl text-slate-900">
+                  Kalender Aktivitas — November 2026
+                </h3>
+                <p class="text-xs text-slate-500 mt-0.5">
+                  Klik tanggal mana saja untuk melihat atau mengisi log kebiasaan harian & gelombang survei
+                </p>
+              </div>
+              <button id="btn-jump-today" type="button" class="self-start sm:self-auto text-xs font-bold bg-yellow-100 hover:bg-yellow-200 text-amber-900 px-3 py-1.5 rounded-xl border border-yellow-300 transition-colors">
+                Kembali ke Hari Ini (16 Nov)
+              </button>
+            </div>
+
+            <!-- Survey Wave Legend Pills -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 my-4 text-[11px] font-semibold">
+              <div class="flex items-center gap-1.5 bg-amber-50 border border-amber-200 px-2.5 py-1.5 rounded-xl">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-400 shrink-0"></span>
+                <span class="text-amber-950 truncate">Pengisian 1: Tgl 3–5</span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-yellow-50 border border-yellow-300 px-2.5 py-1.5 rounded-xl">
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400 shrink-0"></span>
+                <span class="text-amber-950 truncate">Pengisian 2: Tgl 5–9</span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-orange-50 border border-orange-200 px-2.5 py-1.5 rounded-xl">
+                <span class="w-2.5 h-2.5 rounded-full bg-orange-400 shrink-0"></span>
+                <span class="text-amber-950 truncate">Pengisian 3: Tgl 10–11</span>
+              </div>
+              <div class="flex items-center gap-1.5 bg-yellow-100 border border-amber-400 px-2.5 py-1.5 rounded-xl">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-600 shrink-0"></span>
+                <span class="text-amber-950 truncate">Pengisian 4: Tgl 12–13</span>
+              </div>
+            </div>
+
+            <!-- Days of Week Header -->
+            <div class="grid grid-cols-7 gap-1.5 text-center text-xs font-extrabold text-slate-500 mb-2">
+              <div class="py-1 text-amber-700">Min</div>
+              <div class="py-1">Sen</div>
+              <div class="py-1">Sel</div>
+              <div class="py-1">Rab</div>
+              <div class="py-1">Kam</div>
+              <div class="py-1">Jum</div>
+              <div class="py-1">Sab</div>
+            </div>
+
+            <!-- Calendar Dates Grid -->
+            <div id="calendar-grid" class="grid grid-cols-7 gap-1.5 sm:gap-2">
+              <!-- Populated dynamically via JS -->
+            </div>
+          </div>
+
+          <!-- Selected Date Info Banner -->
+          <div id="calendar-wave-info" class="mt-4 bg-yellow-50/90 border border-yellow-200 rounded-2xl p-3.5 flex flex-wrap items-center justify-between gap-2 text-xs">
+            <div class="flex items-center gap-2">
+              <span class="text-base">📅</span>
+              <span id="calendar-info-text" class="font-semibold text-slate-800">
+                Tanggal 16 November 2026 • Hari Aktif Pelacakan Mandiri
+              </span>
+            </div>
+            <span class="text-amber-700 font-bold">Data tersimpan otomatis di browser</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievement & Badges Section -->
+      <div class="bg-gradient-to-br from-white via-yellow-50/70 to-amber-50/60 rounded-3xl p-6 sm:p-8 border border-yellow-200 shadow-gold-sm">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+          <div>
+            <h3 class="font-display font-extrabold text-xl sm:text-2xl text-slate-900">
+              Lencana Pencapaian (Badge Karakter)
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">
+              Selesaikan setiap kebiasaan untuk membuka lencana emas karakter Anak Indonesia Hebat!
+            </p>
+          </div>
+          <div class="inline-flex items-center gap-2 bg-white border border-yellow-300 px-4 py-2 rounded-2xl shadow-xs self-start">
+            <span class="text-amber-500 text-lg">🏆</span>
+            <span class="text-xs sm:text-sm font-extrabold text-slate-900">
+              Terbuka: <span id="badges-unlocked-count" class="text-amber-600">0</span> / 8 Lencana
+            </span>
+          </div>
+        </div>
+
+        <div id="badges-grid" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. TENTANG PROGRAM ==================== -->
+    <section id="tentang" class="py-14 bg-white border-t border-yellow-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-r from-yellow-50 via-brand-ivory to-yellow-50 rounded-3xl p-6 sm:p-10 border border-yellow-200 shadow-gold-sm">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-8 space-y-4">
+              <span class="inline-block text-xs font-extrabold uppercase tracking-wider text-amber-800 bg-yellow-200/80 px-3 py-1 rounded-full">
+                Tentang Program VERTIKAL SMA 2026
+              </span>
+              <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
+                Gerakan 7 Kebiasaan Anak Indonesia Hebat di SMAS St. Fransiskus Xaverius Ruteng
+              </h2>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Dashboard ini mengintegrasikan program penguatan karakter nasional <strong>7 Kebiasaan Anak Indonesia Hebat</strong> dengan pemantauan empiris di <strong>SMAS St. Fransiskus Xaverius Ruteng</strong>. Melalui 4 gelombang pengisian survei selama bulan November 2026 (<strong>Pengisian 1: Tgl 3–5</strong>, <strong>Pengisian 2: Tgl 5–9</strong>, <strong>Pengisian 3: Tgl 10–11</strong>, dan <strong>Pengisian 4: Tgl 12–13</strong>) yang menjangkau <strong>1.402 respons siswa</strong> kelas X, XI, dan XII, sekolah terus mendorong pembiasaan positif menuju Generasi Emas Indonesia.
+              </p>
+            </div>
+
+            <div class="lg:col-span-4 grid grid-cols-2 gap-3">
+              <div class="bg-white p-4 rounded-2xl border border-yellow-200 text-center shadow-xs">
+                <div class="font-display font-extrabold text-2xl text-amber-600">1.402</div>
+                <div class="text-xs font-semibold text-slate-600 mt-1">Total Respons Siswa</div>
+              </div>
+              <div class="bg-white p-4 rounded-2xl border border-yellow-200 text-center shadow-xs">
+                <div class="font-display font-extrabold text-2xl text-amber-600">4</div>
+                <div class="text-xs font-semibold text-slate-600 mt-1">Gelombang Pengisian</div>
+              </div>
+              <div class="bg-white p-4 rounded-2xl border border-yellow-200 text-center shadow-xs">
+                <div class="font-display font-extrabold text-2xl text-amber-600">88.8%</div>
+                <div class="text-xs font-semibold text-slate-600 mt-1">Tertinggi: Bermasyarakat</div>
+              </div>
+              <div class="bg-white p-4 rounded-2xl border border-yellow-200 text-center shadow-xs">
+                <div class="font-display font-extrabold text-2xl text-amber-600">78.95%</div>
+                <div class="text-xs font-semibold text-slate-600 mt-1">Indeks Rata-Rata</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 7. FOOTER ==================== -->
+  <footer class="bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-slate-950 border-t border-yellow-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div>
+          <p class="font-display font-extrabold text-xl sm:text-2xl text-slate-950 tracking-tight">
+            "Anak Hebat Indonesia, Masa Depan Gemilang."
+          </p>
+          <p class="text-xs sm:text-sm font-semibold text-amber-950 mt-1">
+            SMAS St. Fransiskus Xaverius Ruteng • Program VERTIKAL SMA 2026
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center md:items-end gap-1">
+          <span class="inline-flex items-center gap-1.5 bg-white/90 text-amber-950 text-xs font-extrabold px-3.5 py-1.5 rounded-full shadow-xs">
+            <span>7 Kebiasaan Anak Indonesia Hebat</span>
+          </span>
+          <span class="text-xs font-bold text-amber-950/90 mt-1">
+            © 2026 SMAS St. Fransiskus Xaverius Ruteng. Hak Cipta Dilindungi.
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CUSTOM RESET CONFIRMATION MODAL (NO WINDOW.CONFIRM) ==================== -->
+  <div id="reset-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/50 backdrop-blur-xs p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 border-2 border-yellow-300 shadow-2xl transform transition-all">
+      <div class="w-12 h-12 rounded-2xl bg-yellow-100 text-amber-600 flex items-center justify-center mb-4">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+      </div>
+      <h3 class="font-display font-extrabold text-xl text-slate-900">Reset Aktivitas Harian?</h3>
+      <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+        Tindakan ini akan mengatur ulang seluruh centang kebiasaan pada tanggal <strong id="modal-reset-date-label" class="text-slate-900">16 November 2026</strong> menjadi belum selesai (0/7). Riwayat tanggal lain tetap aman.
+      </p>
+      <div class="mt-6 flex items-center justify-end gap-3">
+        <button id="btn-cancel-reset" type="button" class="px-4 py-2.5 rounded-xl text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors">
+          Batal
+        </button>
+        <button id="btn-confirm-reset" type="button" class="px-4 py-2.5 rounded-xl text-sm font-bold text-slate-950 bg-yellow-400 hover:bg-yellow-500 shadow-gold-sm transition-colors">
+          Ya, Reset Sekarang
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none max-w-sm w-full px-4 sm:px-0"></div>
+
+  <!-- ==================== APPLICATION LOGIC ==================== -->
+  <script>
+    /**
+     * 1. EMBEDDED REAL SURVEY DATASET (SMAK St. Fransiskus Xaverius Ruteng - VERTIKAL SMA 2026)
+     * Covers 1,402 total student responses across 4 official waves + pre-survey & class breakdowns.
+     */
+    const HABITS_META = [
+      {
+        id: 'bangun_pagi',
+        number: 1,
+        title: 'Bangun Pagi',
+        shortTitle: 'Bangun Pagi',
+        desc1: 'Membiasakan diri bangun lebih awal.',
+        desc2: 'Melatih kedisiplinan dan tanggung jawab.',
+        badgeName: 'Pejuang Pagi',
+        badgeDesc: 'Menyelesaikan kebiasaan Bangun Pagi',
+        indicators: [
+          { label: 'Bangun tepat waktu', score: 83.2 },
+          { label: 'Persiapan pagi tanpa terburu-buru', score: 86.1 },
+          { label: 'Tidur cukup 7–8 jam', score: 76.2 },
+        ],
+        svgIcon: `
+          <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="18" r="7" fill="#FACC15" stroke="#B45309" stroke-width="1.8"/>
+            <path d="M16 4V7M6 18H3M29 18H26M8.5 10.5L6.5 8.5M23.5 10.5L25.5 8.5" stroke="#D97706" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 25H28" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        `,
+      },
+      {
+        id: 'beribadah',
+        number: 2,
+        title: 'Beribadah',
+        shortTitle: 'Beribadah',
+        desc1: 'Menjalankan ibadah sesuai agama dan kepercayaan.',
+        desc2: 'Membentuk karakter dan nilai spiritual.',
+        badgeName: 'Insan Spiritual',
+        badgeDesc: 'Menyelesaikan kebiasaan Beribadah',
+        indicators: [
+          { label: 'Ibadah tepat waktu', score: 86.4 },
+          { label: 'Waktu khusus berdoa & bersyukur', score: 79.4 },
+          { label: 'Mengamalkan nilai agama', score: 85.4 },
+        ],
+        svgIcon: `
+          <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
+            <path d="M16 5L19 11L25.5 12L20.8 16.5L22 23L16 19.8L10 23L11.2 16.5L6.5 12L13 11L16 5Z" fill="#FEF08A" stroke="#D97706" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M11 26C13 24 19 24 21 26" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        `,
+      },
+      {
+        id: 'berolahraga',
+        number: 3,
+        title: 'Berolahraga',
+        shortTitle: 'Berolahraga',
+        desc1: 'Melakukan aktivitas fisik secara rutin.',
+        desc2: 'Menjaga kesehatan tubuh dan kebugaran.',
+        badgeName: 'Raga Bugar',
+        badgeDesc: 'Menyelesaikan kebiasaan Berolahraga',
+        indicators: [
+          { label: 'Olahraga 15–30 menit/hari', score: 69.6 },
+          { label: 'Aktif bergerak di sela belajar', score: 74.8 },
+          { label: 'Menjaga kebugaran tubuh', score: 82.7 },
+        ],
+        svgIcon: `
+          <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
+            <circle cx="19" cy="7" r="3" fill="#FACC15" stroke="#B45309" stroke-width="1.8"/>
+            <path d="M11 14L16 12L21 15L25 13M16 12L14 19L19 23L18 28M14 19L9 24" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        `,
+      },
+      {
+        id: 'makan_sehat',
+        number: 4,
+        title: 'Makan Sehat dan Bergizi',
+        shortTitle: 'Makan Sehat',
+        desc1: 'Mengonsumsi makanan bergizi seimbang.',
+        desc2: 'Menjaga kesehatan dan mendukung pertumbuhan.',
+        badgeName: 'Gizi Seimbang',
+        badgeDesc: 'Menyelesaikan kebiasaan Makan Sehat & Bergizi',
+        indicators: [
+          { label: 'Makanan bergizi seimbang', score: 79.3 },
+          { label: 'Membatasi fast food & minuman manis', score: 69.1 },
+          { label: 'Minum air 1.5–2L/hari', score: 81.9 },
+        ],
+        svgIcon: `
+          <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
+            <path d="M6 17H26C26 22.5 21.5 26 16 26C10.5 26 6 22.5 6 17Z" fill="#FACC15" stroke="#B45309" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M11 17C11 13.5 13.5 11 16 11C18.5 11 21 13.5 21 17" fill="#FEF08A" stroke="#D97706" stroke-width="1.8"/>
+            <path d="M16 11V7C16 7 19 6 20 8" stroke="#15803D" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        `,
+      },
+      {
+        id: 'gemar_belajar',
+        number: 5,
+        title: 'Gemar Belajar',
+        shortTitle: 'Gemar Belajar',
+        desc1: 'Membiasakan diri mencari ilmu.',
+        desc2: 'Mengembangkan kreativitas dan wawasan.',
+        badgeName: 'Pembelajar Aktif',
+        badgeDesc: 'Menyelesaikan kebiasaan Gemar Belajar',
+        indicators: [
+          { label: 'Membaca di luar buku pelajaran 15 mnt', score: 65.2 },
+          { label: 'Memahami & mendalami bacaan', score: 77.2 },
+          { label: 'Memanfaatkan perpustakaan/platform digital', score: 68.6 },
+        ],
+        svgIcon: `
+          <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
+            <path d="M5 8C9 6.5 13.5 7 16 9.5C18.5 7 23 6.5 27 8V23C23 21.5 18.5 22 16 24.5C13.5 22 9 21.5 5 23V8Z" fill="#FEF08A" stroke="#D97706" stroke-width="1.8" stroke-linejoin="round"/>
+            <line x1="16" y1="9.5" x2="16" y2="24.5" stroke="#B45309" stroke-width="1.8"/>
+          </svg>
+        `,
+      },
+      {
+        id: 'bermasyarakat',
+        number: 6,
+        title: 'Bermasyarakat',
+        shortTitle: 'Bermasyarakat',
+        desc1: 'Bersosialisasi dan membantu sesama.',
+        desc2: 'Menumbuhkan kepedulian dan gotong royong.',
+        badgeName: 'Sahabat Peduli',
+        badgeDesc: 'Menyelesaikan kebiasaan Bermasyarakat',
+        indicators: [
+          { label: 'Peka membantu sesama', score: 87.4 },
+          { label: 'Menjaga kebersihan lingkungan', score: 87.7 },
+          { label: 'Menerapkan 5S (Senyum Sapa Salam Sopan Santun)', score: 91.2 },
+        ],
+        svgIcon: `
+          <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
+            <circle cx="11" cy="11" r="3.5" fill="#FACC15" stroke="#B45309" stroke-width="1.7"/>
+            <circle cx="21" cy="11" r="3.5" fill="#FDE047" stroke="#B45309" stroke-width="1.7"/>
+            <path d="M5 24C5 20.5 7.5 18 11 18C13 18 14.8 18.8 16 20.2C17.2 18.8 19 18 21 18C24.5 18 27 20.5 27 24" stroke="#B45309" stroke-width="1.9" stroke-linecap="round"/>
+          </svg>
+        `,
+      },
+      {
+        id: 'tidur_cepat',
+        number: 7,
+        title: 'Tidur Cepat',
+        shortTitle: 'Tidur Cepat',
+        desc1: 'Membiasakan tidur tepat waktu.',
+        desc2: 'Menjaga kualitas istirahat dan kesehatan.',
+        badgeName: 'Tidur Berkualitas',
+        badgeDesc: 'Menyelesaikan kebiasaan Tidur Cepat',
+        indicators: [
+          { label: 'Tidur tepat waktu maks. 21.30 WITA', score: 71.7 },
+          { label: 'Menjauhkan gadget 30 mnt sebelum tidur', score: 69.6 },
+          { label: 'Istirahat cukup di waktu luang', score: 85.1 },
+        ],
+        svgIcon: `
+          <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
+            <path d="M22 19.5C20.5 20.2 18.8 20.5 17 20.5C11.8 20.5 7.5 16.2 7.5 11C7.5 9.2 8 7.5 8.8 6C5.6 7.5 3.5 10.8 3.5 14.5C3.5 19.7 7.8 24 13 24C16.7 24 19.9 21.9 21.5 18.7" fill="#FACC15" stroke="#B45309" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 7H26L21 12H26" stroke="#D97706" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        `,
+      },
+    ];
+
+    /**
+     * Exact Survey Wave Data (4 Waves + Overall + Pra-Survei)
+     */
+    const SURVEY_WAVES = {
+      all: {
+        label: 'Semua Data Survei',
+        period: '29 Okt – 13 Nov 2026',
+        respondents: 1402,
+        overall: 78.95,
+        likertMean: '3.95 / 5.0',
+        scores: [81.8, 83.7, 75.7, 76.8, 70.4, 88.8, 75.5],
+        likertDist: [38.4, 34.2, 18.6, 6.4, 2.4], // Selalu, Sering, Kadang-kadang, Jarang, Tidak pernah
+      },
+      wave1: {
+        label: 'Pengisian 1 (Tgl 3–5 Nov)',
+        period: '3 – 5 November 2026',
+        respondents: 677,
+        overall: 78.1,
+        likertMean: '3.91 / 5.0',
+        scores: [81.2, 83.1, 74.6, 76.0, 68.9, 88.5, 74.9],
+        likertDist: [36.5, 34.8, 19.4, 6.8, 2.5],
+      },
+      wave2: {
+        label: 'Pengisian 2 (Tgl 5–9 Nov)',
+        period: '5 – 9 November 2026',
+        respondents: 445,
+        overall: 80.0,
+        likertMean: '4.00 / 5.0',
+        scores: [82.8, 84.7, 76.8, 78.1, 71.9, 89.4, 76.1],
+        likertDist: [40.8, 33.9, 17.5, 5.7, 2.1],
+      },
+      wave3: {
+        label: 'Pengisian 3 (Tgl 10–11 Nov)',
+        period: '10 – 11 November 2026',
+        respondents: 138,
+        overall: 80.0,
+        likertMean: '4.00 / 5.0',
+        scores: [83.4, 84.0, 77.7, 77.4, 72.0, 89.2, 76.1],
+        likertDist: [41.1, 33.6, 17.4, 5.8, 2.1],
+      },
+      wave4: {
+        label: 'Pengisian 4 (Tgl 12–13 Nov)',
+        period: '12 – 13 November 2026',
+        respondents: 114,
+        overall: 79.5,
+        likertMean: '3.98 / 5.0',
+        scores: [82.0, 84.6, 75.9, 75.2, 72.9, 89.2, 77.1],
+        likertDist: [39.7, 34.1, 18.0, 6.0, 2.2],
+      },
+    };
+
+    const CLASS_MODIFIERS = {
+      all: { label: 'Semua Kelas', respondents: 1402, overall: 78.95, offset: 0 },
+      X:   { label: 'Kelas X',     respondents: 495,  overall: 79.3,  offset: +0.35 },
+      XI:  { label: 'Kelas XI',    respondents: 511,  overall: 77.4,  offset: -1.55 },
+      XII: { label: 'Kelas XII',   respondents: 390,  overall: 80.5,  offset: +1.55 },
+    };
+
+    /**
+     * Application State & LocalStorage Persistence
+     */
+    const STORAGE_KEY = 'smak_ruteng_7_kebiasaan_2026_v1';
+    const TODAY_KEY = '2026-11-16'; // Monday, November 16, 2026
+
+    let state = {
+      selectedWave: 'all',
+      selectedClass: 'all',
+      barMode: 'single',       // 'single' | 'waves'
+      doughnutMode: 'personal',// 'personal' | 'likert'
+      weeklyMode: 'personal',  // 'personal' | 'timeline'
+      selectedDate: TODAY_KEY,
+      logs: {},                // { '2026-11-16': ['bangun_pagi', ...], ... }
+    };
+
+    function loadState() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          if (parsed && typeof parsed === 'object' && parsed.logs) {
+            state.logs = parsed.logs;
+            return;
+          }
+        }
+      } catch (e) {
+        console.warn('Gagal memuat localStorage:', e);
+      }
+      // Seed realistic sample history for Nov 12–15 so weekly chart & streak look meaningful on first visit
+      state.logs = {
+        '2026-11-12': ['bangun_pagi', 'beribadah', 'makan_sehat', 'bermasyarakat'],
+        '2026-11-13': ['bangun_pagi', 'beribadah', 'berolahraga', 'makan_sehat', 'bermasyarakat', 'tidur_cepat'],
+        '2026-11-14': ['bangun_pagi', 'beribadah', 'gemar_belajar', 'bermasyarakat', 'tidur_cepat'],
+        '2026-11-15': ['bangun_pagi', 'beribadah', 'berolahraga', 'makan_sehat', 'gemar_belajar', 'bermasyarakat', 'tidur_cepat'],
+        '2026-11-16': ['bangun_pagi', 'beribadah'],
+      };
+      saveState();
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ logs: state.logs }));
+      } catch (e) {
+        console.warn('Gagal menyimpan ke localStorage:', e);
+      }
+    }
+
+    /**
+     * Helper: Get active dataset scores based on selected Wave & Class
+     */
+    function getFilteredSurveyData() {
+      const wave = SURVEY_WAVES[state.selectedWave] || SURVEY_WAVES.all;
+      const cls = CLASS_MODIFIERS[state.selectedClass] || CLASS_MODIFIERS.all;
+
+      // If both 'all', return exact overall numbers
+      if (state.selectedWave === 'all' && state.selectedClass === 'all') {
+        return {
+          title: `${wave.label} • ${cls.label}`,
+          respondents: wave.respondents,
+          overall: wave.overall,
+          likertMean: wave.likertMean,
+          scores: [...wave.scores],
+          likertDist: [...wave.likertDist],
+        };
+      }
+
+      // If wave is 'all' and specific class selected, use exact class overall & adjusted habit breakdown
+      if (state.selectedWave === 'all' && state.selectedClass !== 'all') {
+        const adjustedScores = wave.scores.map((s) =>
+          Number(Math.min(99, Math.max(50, s + cls.offset)).toFixed(1))
+        );
+        return {
+          title: `${wave.label} • ${cls.label}`,
+          respondents: cls.respondents,
+          overall: cls.overall,
+          likertMean: `${(cls.overall / 20).toFixed(2)} / 5.0`,
+          scores: adjustedScores,
+          likertDist: [...wave.likertDist],
+        };
+      }
+
+      // Specific wave + optional class offset
+      const adjustedScores = wave.scores.map((s) =>
+        Number(Math.min(99, Math.max(50, s + cls.offset)).toFixed(1))
+      );
+      const adjustedOverall = Number((wave.overall + cls.offset).toFixed(1));
+      const estResp =
+        state.selectedClass === 'all'
+          ? wave.respondents
+          : Math.round(wave.respondents * (cls.respondents / 1402));
+
+      return {
+        title: `${wave.label} • ${cls.label}`,
+        respondents: estResp,
+        overall: adjustedOverall,
+        likertMean: `${(adjustedOverall / 20).toFixed(2)} / 5.0`,
+        scores: adjustedScores,
+        likertDist: [...wave.likertDist],
+      };
+    }
+
+    /**
+     * Helper: Format Indonesian Date Label
+     */
+    function formatIndonesianDate(dateStr) {
+      const [y, m, d] = dateStr.split('-').map(Number);
+      const dateObj = new Date(y, m - 1, d);
+      const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+      const months = [
+        'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+        'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+      ];
+      return `${days[dateObj.getDay()]}, ${d} ${months[m - 1]} ${y}`;
+    }
+
+    /**
+     * Helper: Get Survey Wave Info for a November 2026 day number
+     */
+    function getWaveInfoForNovemberDay(day) {
+      if (day >= 3 && day <= 4) {
+        return { code: 'W1', name: 'Pengisian 1 (Tgl 3–5 Nov • n=677 • 78.1%)', badgeClass: 'bg-amber-100 text-amber-900 border-amber-300' };
+      }
+      if (day === 5) {
+        return { code: 'W1/2', name: 'Transisi Pengisian 1 & Pengisian 2 (Tgl 5 Nov)', badgeClass: 'bg-yellow-200 text-amber-950 border-amber-400' };
+      }
+      if (day >= 6 && day <= 9) {
+        return { code: 'W2', name: 'Pengisian 2 (Tgl 5–9 Nov • n=445 • 80.0%)', badgeClass: 'bg-yellow-100 text-amber-900 border-yellow-300' };
+      }
+      if (day >= 10 && day <= 11) {
+        return { code: 'W3', name: 'Pengisian 3 (Tgl 10–11 Nov • n=138 • 80.0%)', badgeClass: 'bg-orange-100 text-orange-900 border-orange-300' };
+      }
+      if (day >= 12 && day <= 13) {
+        return { code: 'W4', name: 'Pengisian 4 (Tgl 12–13 Nov • n=114 • 79.5%)', badgeClass: 'bg-amber-200/80 text-amber-950 border-amber-400' };
+      }
+      return null;
+    }
+
+    /**
+     * Toast Notification System
+     */
+    function showToast(message, type = 'gold') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      const bgStyle =
+        type === 'badge'
+          ? 'bg-gradient-to-r from-yellow-400 to-amber-500 text-slate-950 border-white'
+          : 'bg-white text-slate-900 border-yellow-300';
+      toast.className = `pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-2xl border-2 shadow-gold-lg text-xs sm:text-sm font-bold transition-all duration-300 translate-y-2 opacity-0 ${bgStyle}`;
+      toast.innerHTML = `
+        <span class="text-base shrink-0">${type === 'badge' ? '🏆' : '✨'}</span>
+        <span>${message}</span>
+      `;
+      container.appendChild(toast);
+
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-2', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-2', 'opacity-0');
+        setTimeout(() => toast.remove(), 300);
+      }, 2800);
+    }
+
+    /**
+     * Toggle Habit Completion for Selected Date
+     */
+    function toggleHabit(habitId, targetDate = state.selectedDate) {
+      if (!state.logs[targetDate]) {
+        state.logs[targetDate] = [];
+      }
+      const list = state.logs[targetDate];
+      const idx = list.indexOf(habitId);
+      const habit = HABITS_META.find((h) => h.id === habitId);
+
+      // Check unlocked badges before toggle
+      const prevUnlocked = computeUnlockedBadges();
+
+      if (idx === -1) {
+        list.push(habitId);
+        showToast(`Hebat! "${habit.title}" ditandai selesai.`);
+      } else {
+        list.splice(idx, 1);
+      }
+
+      saveState();
+      renderAll();
+
+      // Check if new badge unlocked
+      const nowUnlocked = computeUnlockedBadges();
+      nowUnlocked.forEach((bId) => {
+        if (!prevUnlocked.includes(bId)) {
+          const badgeTitle =
+            bId === 'bintang_7'
+              ? 'Bintang 7 Kebiasaan (100% Harian)'
+              : HABITS_META.find((h) => h.id === bId)?.badgeName;
+          if (badgeTitle) {
+            setTimeout(() => {
+              showToast(`Lencana Baru Terbuka: ${badgeTitle}!`, 'badge');
+            }, 350);
+          }
+        }
+      });
+    }
+
+    /**
+     * Compute Unlocked Badges across all user history
+     */
+    function computeUnlockedBadges() {
+      const unlocked = new Set();
+      Object.values(state.logs).forEach((dayHabits) => {
+        if (Array.isArray(dayHabits)) {
+          dayHabits.forEach((id) => unlocked.add(id));
+          if (dayHabits.length === 7) {
+            unlocked.add('bintang_7');
+          }
+        }
+      });
+      return Array.from(unlocked);
+    }
+
+    /**
+     * Compute Personal Metrics (Today & Overall)
+     */
+    function computePersonalStats() {
+      const todayCompleted = state.logs[TODAY_KEY] || [];
+      const selectedCompleted = state.logs[state.selectedDate] || [];
+
+      let activeDays = 0;
+      let totalCompletions = 0;
+
+      Object.values(state.logs).forEach((arr) => {
+        if (Array.isArray(arr) && arr.length > 0) {
+          activeDays += 1;
+          totalCompletions += arr.length;
+        }
+      });
+
+      const todayPct = Math.round((todayCompleted.length / 7) * 100);
+      const selectedPct = Math.round((selectedCompleted.length / 7) * 100);
+
+      return {
+        todayCompleted,
+        todayCount: todayCompleted.length,
+        todayPct,
+        selectedCompleted,
+        selectedCount: selectedCompleted.length,
+        selectedPct,
+        activeDays,
+        totalCompletions,
+      };
+    }
+
+    /**
+     * RENDER 1: 7 Habit Cards
+     */
+    function renderHabitCards() {
+      const grid = document.getElementById('habits-grid');
+      const surveyData = getFilteredSurveyData();
+      const completedSet = new Set(state.logs[state.selectedDate] || []);
+
+      grid.innerHTML = HABITS_META.map((habit, index) => {
+        const isDone = completedSet.has(habit.id);
+        const surveyScore = surveyData.scores[index];
+
+        const indicatorsHtml = habit.indicators
+          .map(
+            (ind) => `
+            <div class="space-y-1">
+              <div class="flex justify-between text-[11px] font-medium text-slate-600">
+                <span>${ind.label}</span>
+                <span class="font-bold text-amber-800">${ind.score}%</span>
+              </div>
+              <div class="w-full h-1.5 bg-yellow-100 rounded-full overflow-hidden">
+                <div class="h-full bg-amber-400 rounded-full" style="width: ${ind.score}%"></div>
+              </div>
+            </div>
+          `
+          )
+          .join('');
+
+        return `
+          <article class="habit-card bg-white rounded-3xl p-5 border-2 ${
+            isDone ? 'border-yellow-400 bg-gradient-to-b from-yellow-50/70 to-white' : 'border-yellow-200/90'
+          } shadow-gold-sm flex flex-col justify-between">
+            <div>
+              <!-- Card Top: Number, SVG Icon & Survey Score Badge -->
+              <div class="flex items-start justify-between gap-3 mb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-yellow-100 to-amber-100 border border-yellow-300 flex items-center justify-center shrink-0">
+                    ${habit.svgIcon}
+                  </div>
+                  <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-yellow-400 text-slate-950 font-extrabold text-xs">
+                    ${habit.number}
+                  </span>
+                </div>
+
+                <div class="text-right">
+                  <span class="inline-block text-[10px] font-bold uppercase tracking-wider text-slate-400">Capaian Survei</span>
+                  <div class="font-display font-extrabold text-base text-amber-700">${surveyScore}%</div>
+                </div>
+              </div>
+
+              <!-- Title & 2 Bullet Descriptions -->
+              <h3 class="font-display font-extrabold text-lg text-slate-900 mb-2">
+                ${habit.title}
+              </h3>
+              <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 mb-4">
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-500 font-bold mt-0.5">•</span>
+                  <span>${habit.desc1}</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-amber-500 font-bold mt-0.5">•</span>
+                  <span>${habit.desc2}</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Interactive Controls: Toggle Checkbox + Expandable Indicator Details -->
+            <div class="pt-3 border-t border-yellow-100 space-y-2.5">
+              <button
+                type="button"
+                onclick="toggleHabit('${habit.id}')"
+                class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all active:scale-95 ${
+                  isDone
+                    ? 'bg-yellow-400 text-slate-950 shadow-xs'
+                    : 'bg-yellow-50 hover:bg-yellow-100 text-amber-900 border border-yellow-200'
+                }"
+              >
+                <span>${isDone ? 'Selesai Dilakukan ✓' : 'Tandai Selesai Hari Ini'}</span>
+                <span class="w-5 h-5 rounded-md flex items-center justify-center ${
+                  isDone ? 'bg-slate-950 text-yellow-400 animate-pop' : 'bg-white border border-yellow-300'
+                }">
+                  ${
+                    isDone
+                      ? '<svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>'
+                      : ''
+                  }
+                </span>
+              </button>
+
+              <!-- Expandable Detail Indikator -->
+              <details class="group">
+                <summary class="list-none cursor-pointer flex items-center justify-between text-[11px] font-bold text-slate-500 hover:text-amber-700 px-1 py-1 select-none">
+                  <span>Detail 3 Indikator Survei</span>
+                  <svg class="w-4 h-4 transition-transform group-open:rotate-180 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div class="mt-2 p-3 rounded-2xl bg-brand-ivory border border-yellow-200/80 space-y-2.5">
+                  ${indicatorsHtml}
+                </div>
+              </details>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    /**
+     * RENDER 2: KPI Cards & Header/Hero Summary Pills
+     */
+    function renderKPIs() {
+      const personal = computePersonalStats();
+      const surveyData = getFilteredSurveyData();
+
+      // Header badge
+      document.getElementById('header-progress-badge').textContent = `${personal.todayCount}/7`;
+
+      // Hero live pill
+      document.getElementById('hero-live-pill').innerHTML = `
+        Progres Hari Ini: <strong class="text-amber-700">${personal.todayCount}/7 Kebiasaan (${personal.todayPct}%)</strong> • Hari Aktif: <strong class="text-amber-700">${personal.activeDays} Hari</strong>
+      `;
+
+      // Filter badge summary
+      document.getElementById('filter-badge-title').textContent = surveyData.title;
+      document.getElementById('filter-badge-detail').textContent = `${surveyData.respondents.toLocaleString('id-ID')} Responden • Indeks ${surveyData.overall}% (${surveyData.likertMean})`;
+
+      // KPI 1
+      document.getElementById('kpi-completed-count').textContent = personal.todayCount;
+      document.getElementById('kpi-total-cumulative').innerHTML = `Total akumulasi: <strong>${personal.totalCompletions}</strong> aktivitas tercatat`;
+
+      // KPI 2
+      document.getElementById('kpi-daily-percent').textContent = `${personal.todayPct}%`;
+      document.getElementById('kpi-daily-bar').style.width = `${personal.todayPct}%`;
+      const statusPill = document.getElementById('kpi-daily-status');
+      if (personal.todayPct === 100) {
+        statusPill.textContent = 'Sempurna! ★';
+      } else if (personal.todayPct >= 50) {
+        statusPill.textContent = 'Sangat Baik';
+      } else if (personal.todayPct > 0) {
+        statusPill.textContent = 'Berjalan';
+      } else {
+        statusPill.textContent = 'Mulai Hari Ini';
+      }
+
+      // KPI 3
+      document.getElementById('kpi-active-days').textContent = personal.activeDays;
+      document.getElementById('kpi-streak-note').textContent =
+        personal.activeDays >= 5
+          ? 'Luar biasa! Konsistensi terjaga dengan baik.'
+          : 'Terus isi checklist harianmu setiap hari!';
+
+      // KPI 4
+      document.getElementById('kpi-school-score').textContent = `${surveyData.overall}%`;
+      document.getElementById('kpi-school-likert').textContent = surveyData.likertMean;
+      document.getElementById('kpi-school-respondents').textContent = `Dari ${surveyData.respondents.toLocaleString('id-ID')} respons siswa SMAK Ruteng`;
+    }
+
+    /**
+     * RENDER 3: 7 Individual Progress Bars (Survey Benchmark vs Personal Status)
+     */
+    function renderHabitProgressBars() {
+      const container = document.getElementById('habit-progress-bars-list');
+      const surveyData = getFilteredSurveyData();
+      const todaySet = new Set(state.logs[TODAY_KEY] || []);
+
+      container.innerHTML = HABITS_META.map((habit, idx) => {
+        const score = surveyData.scores[idx];
+        const doneToday = todaySet.has(habit.id);
+        return `
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-5 rounded-md bg-yellow-100 text-amber-800 font-extrabold inline-flex items-center justify-center text-[11px]">
+                  ${habit.number}
+                </span>
+                <span class="font-bold text-slate-800">${habit.title}</span>
+                ${
+                  doneToday
+                    ? '<span class="bg-yellow-300/80 text-amber-950 text-[10px] font-extrabold px-2 py-0.5 rounded-full">Selesai Hari Ini ✓</span>'
+                    : '<span class="bg-slate-100 text-slate-500 text-[10px] font-semibold px-2 py-0.5 rounded-full">Belum Hari Ini</span>'
+                }
+              </div>
+              <span class="font-extrabold text-amber-700">${score}%</span>
+            </div>
+            <div class="w-full h-2.5 bg-yellow-100/90 rounded-full overflow-hidden">
+              <div class="h-full bg-gradient-to-r from-yellow-400 to-amber-500 rounded-full transition-all duration-500" style="width: ${score}%"></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    /**
+     * RENDER 4: Interactive Checklist Panel
+     */
+    function renderInteractiveChecklist() {
+      const container = document.getElementById('interactive-checklist');
+      const completedList = state.logs[state.selectedDate] || [];
+      const completedSet = new Set(completedList);
+      const count = completedList.length;
+      const pct = Math.round((count / 7) * 100);
+
+      const isToday = state.selectedDate === TODAY_KEY;
+      document.getElementById('selected-date-label').textContent = isToday
+        ? `Hari Ini (${formatIndonesianDate(state.selectedDate)})`
+        : formatIndonesianDate(state.selectedDate);
+
+      const dayNum = Number(state.selectedDate.split('-')[2]);
+      const waveInfo = getWaveInfoForNovemberDay(dayNum);
+      document.getElementById('selected-date-wave-note').textContent = waveInfo
+        ? `Periode Survei: ${waveInfo.name}`
+        : 'Tandai setiap kebiasaan yang telah dilaksanakan pada tanggal ini';
+
+      document.getElementById('checklist-fraction').textContent = `${count}/7`;
+      document.getElementById('checklist-percent-pill').textContent = `${pct}%`;
+      document.getElementById('checklist-progress-bar').style.width = `${pct}%`;
+
+      const motEl = document.getElementById('checklist-motivation');
+      if (count === 7) motEl.textContent = 'Luar Biasa! Semua 7 Kebiasaan Tuntas! 🏆';
+      else if (count >= 4) motEl.textContent = 'Hampir selesai, terus semangat!';
+      else if (count >= 1) motEl.textContent = 'Awal yang bagus, lanjutkan!';
+      else motEl.textContent = 'Ayo mulai langkah pertamamu!';
+
+      container.innerHTML = HABITS_META.map((habit) => {
+        const checked = completedSet.has(habit.id);
+        return `
+          <label
+            onclick="toggleHabit('${habit.id}')"
+            class="cursor-pointer flex items-center justify-between p-3 rounded-2xl border transition-all select-none ${
+              checked
+                ? 'bg-yellow-50 border-yellow-400 shadow-xs'
+                : 'bg-white hover:bg-yellow-50/50 border-slate-200'
+            }"
+          >
+            <div class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-lg flex items-center justify-center transition-all ${
+                checked
+                  ? 'bg-yellow-400 text-slate-950 font-extrabold animate-pop'
+                  : 'bg-slate-100 border border-slate-300 text-transparent'
+              }">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <div>
+                <div class="text-xs sm:text-sm font-bold ${checked ? 'text-slate-900' : 'text-slate-700'}">
+                  ${habit.number}. ${habit.title}
+                </div>
+                <div class="text-[11px] text-slate-500 line-clamp-1">${habit.desc1}</div>
+              </div>
+            </div>
+            <span class="text-[11px] font-bold px-2 py-0.5 rounded-lg ${
+              checked ? 'bg-amber-200/80 text-amber-950' : 'bg-slate-100 text-slate-500'
+            }">
+              ${checked ? 'Selesai' : 'Belum'}
+            </span>
+          </label>
+        `;
+      }).join('');
+    }
+
+    /**
+     * RENDER 5: Interactive November 2026 Calendar
+     */
+    function renderCalendar() {
+      const grid = document.getElementById('calendar-grid');
+      // November 1, 2026 is a Sunday (day index 0)
+      const totalDays = 30;
+      let html = '';
+
+      for (let day = 1; day <= totalDays; day++) {
+        const dateKey = `2026-11-${String(day).padStart(2, '0')}`;
+        const completedCount = (state.logs[dateKey] || []).length;
+        const isSelected = state.selectedDate === dateKey;
+        const isToday = dateKey === TODAY_KEY;
+        const waveInfo = getWaveInfoForNovemberDay(day);
+
+        let bgClasses = 'bg-white hover:bg-yellow-50 border-slate-200 text-slate-800';
+        if (waveInfo) {
+          bgClasses = `${waveInfo.badgeClass} hover:brightness-95`;
+        }
+        if (isSelected) {
+          bgClasses += ' ring-2 ring-amber-500 ring-offset-1 font-extrabold';
+        }
+
+        html += `
+          <button
+            type="button"
+            onclick="selectCalendarDate('${dateKey}')"
+            class="relative p-2 sm:p-2.5 rounded-2xl border text-left transition-all flex flex-col justify-between min-h-[58px] sm:min-h-[66px] ${bgClasses}"
+          >
+            <div class="flex items-center justify-between w-full">
+              <span class="text-xs sm:text-sm font-extrabold ${isToday ? 'bg-slate-900 text-yellow-300 px-1.5 py-0.5 rounded-md' : ''}">
+                ${day}
+              </span>
+              ${
+                waveInfo
+                  ? `<span class="text-[9px] font-extrabold uppercase tracking-tighter px-1 rounded bg-white/80 text-amber-900">${waveInfo.code}</span>`
+                  : ''
+              }
+            </div>
+
+            <div class="mt-1.5 flex items-center justify-between w-full">
+              ${
+                completedCount > 0
+                  ? `<span class="inline-flex items-center gap-0.5 text-[10px] font-extrabold ${
+                      completedCount === 7
+                        ? 'bg-yellow-400 text-slate-950 px-1.5 py-0.5 rounded-full'
+                        : 'text-amber-800'
+                    }">${completedCount}/7${completedCount === 7 ? '★' : ''}</span>`
+                  : `<span class="text-[10px] text-slate-400">—</span>`
+              }
+            </div>
+          </button>
+        `;
+      }
+
+      grid.innerHTML = html;
+
+      // Update info banner below calendar
+      const selectedDayNum = Number(state.selectedDate.split('-')[2]);
+      const waveInfo = getWaveInfoForNovemberDay(selectedDayNum);
+      const count = (state.logs[state.selectedDate] || []).length;
+      const infoEl = document.getElementById('calendar-info-text');
+      infoEl.textContent = waveInfo
+        ? `${formatIndonesianDate(state.selectedDate)} • ${waveInfo.name} • Progresmu: ${count}/7`
+        : `${formatIndonesianDate(state.selectedDate)} • Progres Kebiasaan: ${count}/7 selesai`;
+    }
+
+    function selectCalendarDate(dateKey) {
+      state.selectedDate = dateKey;
+      renderInteractiveChecklist();
+      renderCalendar();
+      renderHabitCards();
+    }
+
+    /**
+     * RENDER 6: 8 Unlockable Achievement Badges
+     */
+    function renderBadges() {
+      const grid = document.getElementById('badges-grid');
+      const unlocked = new Set(computeUnlockedBadges());
+
+      const allBadges = [
+        ...HABITS_META.map((h) => ({
+          id: h.id,
+          name: h.badgeName,
+          desc: h.badgeDesc,
+          icon: h.svgIcon,
+        })),
+        {
+          id: 'bintang_7',
+          name: 'Bintang 7 Kebiasaan',
+          desc: 'Capai 100% (7/7) kebiasaan dalam sehari',
+          icon: `
+            <svg class="w-7 h-7" viewBox="0 0 32 32" fill="none">
+              <path d="M16 4L19.6 11.4L27.8 12.6L21.9 18.3L23.3 26.5L16 22.6L8.7 26.5L10.1 18.3L4.2 12.6L12.4 11.4L16 4Z" fill="#FACC15" stroke="#B45309" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          `,
+        },
+      ];
+
+      document.getElementById('badges-unlocked-count').textContent = unlocked.size;
+
+      grid.innerHTML = allBadges
+        .map((b) => {
+          const isOpen = unlocked.has(b.id);
+          return `
+            <div class="rounded-2xl p-3.5 border text-center transition-all flex flex-col items-center justify-between ${
+              isOpen
+                ? 'bg-white border-yellow-400 shadow-gold-sm scale-100'
+                : 'bg-slate-50/80 border-slate-200 opacity-60 grayscale'
+            }">
+              <div class="w-12 h-12 rounded-2xl mb-2 flex items-center justify-center ${
+                isOpen ? 'bg-gradient-to-br from-yellow-200 to-amber-200 border border-yellow-400' : 'bg-slate-200/70'
+              }">
+                ${b.icon}
+              </div>
+              <div class="font-display font-extrabold text-xs text-slate-900 leading-tight">${b.name}</div>
+              <div class="text-[10px] text-slate-500 mt-1 line-clamp-2">${b.desc}</div>
+              <span class="mt-2 inline-block text-[10px] font-extrabold px-2 py-0.5 rounded-full ${
+                isOpen ? 'bg-yellow-400 text-slate-950' : 'bg-slate-200 text-slate-600'
+              }">
+                ${isOpen ? 'Terbuka ★' : 'Terkunci'}
+              </span>
+            </div>
+          `;
+        })
+        .join('');
+    }
+
+    /**
+     * CHART.JS VISUALIZATIONS (Bar, Doughnut, Weekly/Timeline)
+     */
+    let barChartInstance = null;
+    let doughnutChartInstance = null;
+    let weeklyChartInstance = null;
+
+    function renderCharts() {
+      const surveyData = getFilteredSurveyData();
+      const personal = computePersonalStats();
+      const shortLabels = HABITS_META.map((h) => h.shortTitle);
+
+      // 1. BAR CHART (Per Kebiasaan vs 4 Gelombang Comparison)
+      const barCtx = document.getElementById('habitsBarChart').getContext('2d');
+      if (barChartInstance) barChartInstance.destroy();
+
+      if (state.barMode === 'single') {
+        document.getElementById('bar-chart-title').textContent = `Capaian 7 Kebiasaan (${surveyData.title})`;
+        document.getElementById('bar-chart-subtitle').textContent = `Persentase indeks pembiasaan dari ${surveyData.respondents.toLocaleString('id-ID')} responden`;
+
+        barChartInstance = new Chart(barCtx, {
+          type: 'bar',
+          data: {
+            labels: shortLabels,
+            datasets: [
+              {
+                label: 'Indeks Capaian (%)',
+                data: surveyData.scores,
+                backgroundColor: [
+                  '#FACC15', '#F59E0B', '#FDE047', '#EAB308', '#FBBF24', '#D97706', '#FACC15'
+                ],
+                borderColor: '#B45309',
+                borderWidth: 1.5,
+                borderRadius: 10,
+                maxBarThickness: 42,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: (ctx) => ` Capaian: ${ctx.parsed.y}%`,
+                },
+              },
+            },
+            scales: {
+              y: {
+                min: 50,
+                max: 100,
+                grid: { color: 'rgba(234, 179, 8, 0.14)' },
+                ticks: { callback: (v) => `${v}%`, font: { family: 'Plus Jakarta Sans', size: 11 } },
+              },
+              x: {
+                grid: { display: false },
+                ticks: { font: { family: 'Plus Jakarta Sans', size: 11, weight: '600' } },
+              },
+            },
+          },
+        });
+      } else {
+        document.getElementById('bar-chart-title').textContent = 'Perbandingan 4 Gelombang Pengisian (3–13 Nov)';
+        document.getElementById('bar-chart-subtitle').textContent = 'Pengisian 1 (3–5 Nov), Pengisian 2 (5–9 Nov), Pengisian 3 (10–11 Nov), Pengisian 4 (12–13 Nov)';
+
+        barChartInstance = new Chart(barCtx, {
+          type: 'bar',
+          data: {
+            labels: shortLabels,
+            datasets: [
+              {
+                label: 'Pengisian 1 (3–5 Nov)',
+                data: SURVEY_WAVES.wave1.scores,
+                backgroundColor: '#FDE047',
+                borderRadius: 6,
+              },
+              {
+                label: 'Pengisian 2 (5–9 Nov)',
+                data: SURVEY_WAVES.wave2.scores,
+                backgroundColor: '#FACC15',
+                borderRadius: 6,
+              },
+              {
+                label: 'Pengisian 3 (10–11 Nov)',
+                data: SURVEY_WAVES.wave3.scores,
+                backgroundColor: '#F59E0B',
+                borderRadius: 6,
+              },
+              {
+                label: 'Pengisian 4 (12–13 Nov)',
+                data: SURVEY_WAVES.wave4.scores,
+                backgroundColor: '#B45309',
+                borderRadius: 6,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: 'bottom',
+                labels: { boxWidth: 12, font: { family: 'Plus Jakarta Sans', size: 11, weight: '600' } },
+              },
+            },
+            scales: {
+              y: {
+                min: 60,
+                max: 95,
+                grid: { color: 'rgba(234, 179, 8, 0.14)' },
+                ticks: { callback: (v) => `${v}%`, font: { size: 11 } },
+              },
+              x: {
+                grid: { display: false },
+                ticks: { font: { size: 11, weight: '600' } },
+              },
+            },
+          },
+        });
+      }
+
+      // 2. DOUGHNUT CHART (Personal Daily Progress vs Survey Likert Distribution)
+      const dCtx = document.getElementById('consistencyDoughnutChart').getContext('2d');
+      if (doughnutChartInstance) doughnutChartInstance.destroy();
+
+      if (state.doughnutMode === 'personal') {
+        document.getElementById('doughnut-chart-title').textContent = `Konsistensi Harian (${personal.todayPct}%)`;
+        document.getElementById('doughnut-chart-subtitle').textContent = `${personal.todayCount} selesai dan ${7 - personal.todayCount} belum dilakukan hari ini`;
+
+        doughnutChartInstance = new Chart(dCtx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Selesai Hari Ini', 'Belum Dilakukan'],
+            datasets: [
+              {
+                data: [personal.todayCount, 7 - personal.todayCount],
+                backgroundColor: ['#FACC15', '#FEF3C7'],
+                borderColor: ['#D97706', '#FDE68A'],
+                borderWidth: 2,
+                hoverOffset: 6,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '66%',
+            plugins: {
+              legend: {
+                position: 'bottom',
+                labels: { font: { family: 'Plus Jakarta Sans', size: 12, weight: '600' } },
+              },
+            },
+          },
+        });
+      } else {
+        document.getElementById('doughnut-chart-title').textContent = 'Distribusi Skala Likert Survei';
+        document.getElementById('doughnut-chart-subtitle').textContent = `Proporsi jawaban siswa pada ${surveyData.title}`;
+
+        doughnutChartInstance = new Chart(dCtx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Selalu (5)', 'Sering (4)', 'Kadang-kadang (3)', 'Jarang (2)', 'Tidak Pernah (1)'],
+            datasets: [
+              {
+                data: surveyData.likertDist,
+                backgroundColor: ['#D97706', '#FACC15', '#FDE047', '#FEF08A', '#E2E8F0'],
+                borderColor: '#FFFFFF',
+                borderWidth: 2,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '60%',
+            plugins: {
+              legend: {
+                position: 'bottom',
+                labels: { boxWidth: 11, font: { family: 'Plus Jakarta Sans', size: 11, weight: '600' } },
+              },
+            },
+          },
+        });
+      }
+
+      // 3. WEEKLY ACTIVITY / 4-WAVE TIMELINE CHART
+      const wCtx = document.getElementById('weeklyActivityChart').getContext('2d');
+      if (weeklyChartInstance) weeklyChartInstance.destroy();
+
+      if (state.weeklyMode === 'personal') {
+        document.getElementById('weekly-chart-title').textContent = 'Grafik Aktivitas Mingguan (10–16 Nov)';
+        document.getElementById('weekly-chart-subtitle').textContent = 'Jumlah kebiasaan selesai per hari dalam 7 hari terakhir';
+
+        const weekDays = [
+          { label: 'Sel (10)', key: '2026-11-10' },
+          { label: 'Rab (11)', key: '2026-11-11' },
+          { label: 'Kam (12)', key: '2026-11-12' },
+          { label: 'Jum (13)', key: '2026-11-13' },
+          { label: 'Sab (14)', key: '2026-11-14' },
+          { label: 'Min (15)', key: '2026-11-15' },
+          { label: 'Sen (16)', key: '2026-11-16' },
+        ];
+        const counts = weekDays.map((d) => (state.logs[d.key] || []).length);
+
+        weeklyChartInstance = new Chart(wCtx, {
+          type: 'line',
+          data: {
+            labels: weekDays.map((d) => d.label),
+            datasets: [
+              {
+                label: 'Kebiasaan Selesai',
+                data: counts,
+                borderColor: '#D97706',
+                backgroundColor: 'rgba(250, 204, 21, 0.28)',
+                borderWidth: 3,
+                pointBackgroundColor: '#FACC15',
+                pointBorderColor: '#92400E',
+                pointRadius: 5,
+                tension: 0.35,
+                fill: true,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+            },
+            scales: {
+              y: {
+                min: 0,
+                max: 7,
+                ticks: { stepSize: 1, font: { size: 11 } },
+                grid: { color: 'rgba(234, 179, 8, 0.14)' },
+              },
+              x: {
+                grid: { display: false },
+                ticks: { font: { size: 11, weight: '600' } },
+              },
+            },
+          },
+        });
+      } else {
+        document.getElementById('weekly-chart-title').textContent = 'Tren Indeks & Responden 4 Gelombang';
+        document.getElementById('weekly-chart-subtitle').textContent = 'Pra-Survei (29–30 Okt) hingga Pengisian 4 (12–13 Nov 2026)';
+
+        weeklyChartInstance = new Chart(wCtx, {
+          type: 'bar',
+          data: {
+            labels: [
+              'Pra-Survei (29–30 Okt)',
+              'Pengisian 1 (3–5 Nov)',
+              'Pengisian 2 (5–9 Nov)',
+              'Pengisian 3 (10–11 Nov)',
+              'Pengisian 4 (12–13 Nov)',
+            ],
+            datasets: [
+              {
+                type: 'line',
+                label: 'Indeks Kebiasaan (%)',
+                data: [74.3, 78.1, 80.0, 80.0, 79.5],
+                borderColor: '#B45309',
+                backgroundColor: '#B45309',
+                borderWidth: 3,
+                yAxisID: 'y1',
+                tension: 0.3,
+              },
+              {
+                type: 'bar',
+                label: 'Jumlah Responden',
+                data: [28, 677, 445, 138, 114],
+                backgroundColor: '#FACC15',
+                borderRadius: 8,
+                yAxisID: 'y',
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11, weight: '600' } } },
+            },
+            scales: {
+              y: {
+                position: 'left',
+                grid: { color: 'rgba(234, 179, 8, 0.14)' },
+                ticks: { font: { size: 11 } },
+              },
+              y1: {
+                position: 'right',
+                min: 70,
+                max: 85,
+                grid: { drawOnChartArea: false },
+                ticks: { callback: (v) => `${v}%`, font: { size: 11 } },
+              },
+              x: {
+                grid: { display: false },
+                ticks: { font: { size: 10, weight: '600' } },
+              },
+            },
+          },
+        });
+      }
+    }
+
+    /**
+     * Master Re-render Function
+     */
+    function renderAll() {
+      renderHabitCards();
+      renderKPIs();
+      renderHabitProgressBars();
+      renderInteractiveChecklist();
+      renderCalendar();
+      renderBadges();
+      renderCharts();
+    }
+
+    /**
+     * Real-Time Indonesian Clock
+     */
+    function startLiveClock() {
+      const el = document.getElementById('live-datetime');
+      const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+      const months = [
+        'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni',
+        'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'
+      ];
+
+      function update() {
+        const now = new Date();
+        const dayName = days[now.getDay()];
+        const d = now.getDate();
+        const mName = months[now.getMonth()];
+        const y = now.getFullYear();
+        const hh = String(now.getHours()).padStart(2, '0');
+        const mm = String(now.getMinutes()).padStart(2, '0');
+        const ss = String(now.getSeconds()).padStart(2, '0');
+        el.textContent = `${dayName}, ${d} ${mName} ${y} • ${hh}:${mm}:${ss}`;
+      }
+      update();
+      setInterval(update, 1000);
+    }
+
+    /**
+     * Initialize Event Listeners on DOM Ready
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+      loadState();
+      startLiveClock();
+      renderAll();
+
+      // Mobile menu toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileNav = document.getElementById('mobile-nav');
+      mobileBtn.addEventListener('click', () => {
+        mobileNav.classList.toggle('hidden');
+      });
+      mobileNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => mobileNav.classList.add('hidden'));
+      });
+
+      // Wave filter tabs
+      document.querySelectorAll('.wave-tab').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          state.selectedWave = btn.dataset.wave;
+          document.querySelectorAll('.wave-tab').forEach((b) => {
+            const active = b.dataset.wave === state.selectedWave;
+            b.className = active
+              ? 'wave-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold bg-yellow-400 text-slate-950 shadow-xs transition-all'
+              : 'wave-tab px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-yellow-50 text-slate-700 hover:bg-yellow-100 border border-yellow-200 transition-all';
+          });
+          renderAll();
+        });
+      });
+
+      // Class filter tabs
+      document.querySelectorAll('.class-tab').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          state.selectedClass = btn.dataset.class;
+          document.querySelectorAll('.class-tab').forEach((b) => {
+            const active = b.dataset.class === state.selectedClass;
+            b.className = active
+              ? 'class-tab px-3 py-1.5 rounded-xl text-xs font-bold bg-amber-500 text-white shadow-xs transition-all'
+              : 'class-tab px-3 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-yellow-100 transition-all';
+          });
+          renderAll();
+        });
+      });
+
+      // Chart Mode Toggles
+      document.querySelectorAll('.bar-mode-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          state.barMode = btn.dataset.barmode;
+          document.querySelectorAll('.bar-mode-btn').forEach((b) => {
+            b.className =
+              b.dataset.barmode === state.barMode
+                ? 'bar-mode-btn px-2.5 py-1 rounded-lg text-xs font-bold bg-yellow-400 text-slate-950 transition-all'
+                : 'bar-mode-btn px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all';
+          });
+          renderCharts();
+        });
+      });
+
+      document.querySelectorAll('.doughnut-mode-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          state.doughnutMode = btn.dataset.doughnutmode;
+          document.querySelectorAll('.doughnut-mode-btn').forEach((b) => {
+            b.className =
+              b.dataset.doughnutmode === state.doughnutMode
+                ? 'doughnut-mode-btn px-2.5 py-1 rounded-lg text-xs font-bold bg-yellow-400 text-slate-950 transition-all'
+                : 'doughnut-mode-btn px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all';
+          });
+          renderCharts();
+        });
+      });
+
+      document.querySelectorAll('.weekly-mode-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          state.weeklyMode = btn.dataset.weeklymode;
+          document.querySelectorAll('.weekly-mode-btn').forEach((b) => {
+            b.className =
+              b.dataset.weeklymode === state.weeklyMode
+                ? 'weekly-mode-btn px-2.5 py-1 rounded-lg text-xs font-bold bg-yellow-400 text-slate-950 transition-all'
+                : 'weekly-mode-btn px-2.5 py-1 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900 transition-all';
+          });
+          renderCharts();
+        });
+      });
+
+      // Checklist "Tandai Semua" button
+      document.getElementById('btn-complete-all').addEventListener('click', () => {
+        const prevUnlocked = computeUnlockedBadges();
+        state.logs[state.selectedDate] = HABITS_META.map((h) => h.id);
+        saveState();
+        renderAll();
+        showToast('Seluruh 7 kebiasaan berhasil ditandai selesai! ★', 'badge');
+        if (!prevUnlocked.includes('bintang_7')) {
+          setTimeout(() => {
+            showToast('Lencana Baru Terbuka: Bintang 7 Kebiasaan!', 'badge');
+          }, 400);
+        }
+      });
+
+      // Reset Daily Activity Modal Flow
+      const resetModal = document.getElementById('reset-modal');
+      document.getElementById('btn-reset-daily').addEventListener('click', () => {
+        document.getElementById('modal-reset-date-label').textContent = formatIndonesianDate(state.selectedDate);
+        resetModal.classList.remove('hidden');
+        resetModal.classList.add('flex');
+      });
+
+      document.getElementById('btn-cancel-reset').addEventListener('click', () => {
+        resetModal.classList.add('hidden');
+        resetModal.classList.remove('flex');
+      });
+
+      document.getElementById('btn-confirm-reset').addEventListener('click', () => {
+        state.logs[state.selectedDate] = [];
+        saveState();
+        renderAll();
+        resetModal.classList.add('hidden');
+        resetModal.classList.remove('flex');
+        showToast('Aktivitas tanggal terpilih berhasil di-reset.');
+      });
+
+      // Jump back to today button
+      document.getElementById('btn-jump-today').addEventListener('click', () => {
+        selectCalendarDate(TODAY_KEY);
+      });
+
+      // Active navigation highlight on scroll
+      const sections = ['beranda', 'kebiasaan', 'statistik', 'aktivitas', 'tentang'];
+      window.addEventListener('scroll', () => {
+        const scrollPos = window.scrollY + 150;
+        let current = 'beranda';
+        sections.forEach((secId) => {
+          const el = document.getElementById(secId);
+          if (el && el.offsetTop <= scrollPos) {
+            current = secId;
+          }
+        });
+        document.querySelectorAll('.nav-link').forEach((link) => {
+          const isMatch = link.dataset.nav === current;
+          link.className = isMatch
+            ? 'nav-link px-3.5 py-2 rounded-xl text-sm font-semibold transition-all bg-yellow-400 text-slate-950 shadow-xs'
+            : 'nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-600 hover:text-slate-900 hover:bg-yellow-100/80 transition-all';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
